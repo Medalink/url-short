@@ -1,0 +1,34 @@
+name: url-short
+recipe: laravel
+config:
+  php: '8.0'
+  composer_version: 2
+  database: mysql:8.0
+  webroot: public
+  via: nginx
+  cache: redis
+  xdebug: true
+services:
+  cache:
+    portforward: 63799
+  database:
+    portforward: 33066
+  node:
+    type: node
+    overrides:
+      ports:
+        - '3000:3000'
+tooling:
+  phpunit:
+    service: appserver
+    description: "Run PHP Unit tests: lando phpunit"
+    cmd: /app/vendor/bin/phpunit
+  yarn:
+    service: node
+  vapor:
+    service: appserver
+    cmd: "php vendor/bin/vapor"
+  test:
+    service: appserver
+    description: "Run Laravel Artisan test command"
+    cmd: "php artisan test --env=testing"
