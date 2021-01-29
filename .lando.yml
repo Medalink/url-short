@@ -14,7 +14,7 @@ services:
   database:
     portforward: 33066
   node:
-    type: node
+    type: node:14
     overrides:
       ports:
         - '3000:3000'
