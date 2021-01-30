@@ -14,4 +14,9 @@ class Link extends Model
     {
         return Str::random($limit);
     }
+
+    public function getShortUrl(): string
+    {
+        return config('app.url') . '/' . $this->code;
+    }
 }
