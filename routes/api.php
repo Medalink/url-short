@@ -21,3 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::put('shorten-url', [ShortenController::class, 'store'])
     ->middleware('auth:sanctum');
+
+Route::get('view-urls', [ShortenController::class, 'view'])
+    ->middleware('auth:sanctum');

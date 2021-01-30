@@ -10,12 +10,16 @@ class Link extends Model
 {
     use HasFactory;
 
+    public $appends = [
+        'short_url'
+    ];
+
     public static function encode(int $limit = 8): string
     {
         return Str::random($limit);
     }
 
-    public function getShortUrl(): string
+    public function getShortUrlAttribute(): string
     {
         return config('app.url') . '/' . $this->code;
     }

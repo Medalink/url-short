@@ -18,7 +18,14 @@ class ShortenController extends Controller
         $link->save();
 
         return response()->json([
-            'short_url' => $link->getShortUrl(),
+            'short_url' => $link->short_url,
         ]);
+    }
+
+    public function view(Request $request)
+    {
+        $links = Link::where('user_id', $request->user()->id)->get();
+
+        return response()->json($links);
     }
 }
