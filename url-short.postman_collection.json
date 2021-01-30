@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "a34d0165-f91d-456f-ad9a-8b3ab359bd8b",
+		"name": "url-short",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "shorten-url",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://url-short.lndo.site/api/shorten-url?url=https://test.com",
+					"protocol": "https",
+					"host": [
+						"url-short",
+						"lndo",
+						"site"
+					],
+					"path": [
+						"api",
+						"shorten-url"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://url-short.lndo.site/api/view-urls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://url-short.lndo.site/api/view-urls",
+					"protocol": "https",
+					"host": [
+						"url-short",
+						"lndo",
+						"site"
+					],
+					"path": [
+						"api",
+						"view-urls"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "hfp1a8IcUCPmN8SUgtwe50E4LdzpjgC7sTVijlEs",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "88cbfd06-4f95-4197-8431-125ca9ad271e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "022968f1-adfb-414f-85ed-eb5f113d730f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
