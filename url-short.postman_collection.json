@@ -59,7 +59,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "hfp1a8IcUCPmN8SUgtwe50E4LdzpjgC7sTVijlEs",
+				"value": "wJnFyhs2CiW378g1Wo3QoWaTCtd9P0zWb5t61H5f",
 				"type": "string"
 			}
 		]
@@ -68,7 +68,6 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "88cbfd06-4f95-4197-8431-125ca9ad271e",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -78,13 +77,11 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "022968f1-adfb-414f-85ed-eb5f113d730f",
 				"type": "text/javascript",
 				"exec": [
 					""
 				]
 			}
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }

@@ -20,8 +20,6 @@ class CreateLinksTable extends Migration
             $table->longText('url');
             $table->string('code');
             $table->timestamps();
-
-            $table->index(['url', 'code']);
         });
     }
 

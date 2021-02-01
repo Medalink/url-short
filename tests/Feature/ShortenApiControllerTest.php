@@ -24,10 +24,8 @@ class ShortenApiControllerTest extends TestCase
             'url' => $testLink->url,
         ]);
 
-        // Lookup result from DB
         $link = Link::where('user_id', $user->id)->where('url', $testLink->url)->first();
 
-        // Verify our match
         $response->assertJson([
             'short_url' => $link->short_url,
         ]);
@@ -44,7 +42,6 @@ class ShortenApiControllerTest extends TestCase
 
         $response = $this->get('/api/view-urls');
 
-        // Verify we match our DB
         $response->assertJson($testLink->toArray());
     }
 }
