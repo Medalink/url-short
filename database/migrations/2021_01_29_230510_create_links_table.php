@@ -17,7 +17,7 @@ class CreateLinksTable extends Migration
         Schema::create('links', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class);
-            $table->string('url');
+            $table->longText('url');
             $table->string('code');
             $table->timestamps();
 
